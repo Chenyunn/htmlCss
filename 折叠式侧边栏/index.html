@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>折叠式侧边栏</title>
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+	<nav class="navbar">
+		<span class="open-side">
+			<a href="#" onclick="openSideMenu()">
+				<svg width="30" height="30">
+					<path d="M0,5 30,5" stroke="#FFF" stroke-width="5"></path>
+					<path d="M0,14 30,14" stroke="#fff" stroke-width="5"></path>
+					<path d="M0,23 30,23" stroke="#fff" stroke-width="5"></path>
+				</svg>
+			</a>
+		</span>
+		<ul class="navbar-nav">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">services</a></li>
+			<li><a href="#">contact</a></li>
+		</ul>
+	</nav>
+	
+	<div id="side-mune" class="side-nav">
+		<a href="#" class="btn-close" onclick="closeSideMenu()">&times;</a>
+		<a href="#">Home</a>
+		<a href="#">About</a>
+		<a href="#">Services</a>
+		<a href="#">Contact</a>
+	</div>
+	
+	<div id="main">
+		<h1>快来学习</h1>
+	</div>
+	<script>
+		function openSideMenu(){
+			document.getElementById('side-mune').style.width = '250px'
+			document.getElementById('main').style.marginLeft = '250px'
+		}
+		function closeSideMenu(){
+			document.getElementById('side-mune').style.width = '0'
+			document.getElementById('main').style.marginLeft = '0'
+		}
+	</script>
+</body>
+</html>
